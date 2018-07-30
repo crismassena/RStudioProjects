@@ -1,4 +1,5 @@
 #-----Tabela de Frequencia para Gênero-----#
+library(readxl)
 Nota_Alunos <- read_excel("Nota de Alunos - Parte 1.xlsx")
 freq_genero <- table(Nota_Alunos$Genero)
 freq_genero
