@@ -63,3 +63,22 @@ boxplot(Nota_Alunos$Nota_Final ~ Nota_Alunos$Disciplina,
         main = "Nota final por Disciplina",
         xlab = "Disciplina", col = c("orange", "green"))
 
+#-----Medidas de tendencia Central-----#
+#-----Media Aritmetica-----#
+media1<-mean(Nota_Alunos$Prova_1)
+media1
+media2<-mean(Nota_Alunos$Prova_2)
+media2
+media3<-mean(Nota_Alunos$Prova_3)
+# Existe um valor nulo na coluna, esse resultado dessa forma vem NA
+media3 
+# na.rm=TRUE faz o Na ser desconsiderado no calculo da média
+media3<-mean(Nota_Alunos$Prova_3, na.rm=TRUE)
+media3
+mediatotal<-mean(media1, media2, media3)
+mediatotal
+
+#-----Mediana-----#
+median(Nota_Alunos$Prova_1)
+median(Nota_Alunos$Prova_2)
+median(Nota_Alunos$Prova_3, na.rm=TRUE)
